@@ -1004,3 +1004,19 @@ OpenAI API attempt 1 succeeded
 [32mINFO[0m:     127.0.0.1:46250 - "[1mGET /wait_batch HTTP/1.1[0m" [32m200 OK[0m
 [34m[1mwandb[0m: [33mWARNING[0m Serializing object of type str that is 111904 bytes
 [32mINFO[0m:     127.0.0.1:41060 - "[1mPOST /sample_conversations HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:55754 - "[1mPOST /get_end_rm_reward HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:55774 - "[1mPOST /get_end_rm_reward HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:55776 - "[1mPOST /get_end_rm_reward HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:55762 - "[1mPOST /get_end_rm_reward HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:55778 - "[1mPOST /get_thinking_reward HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:55792 - "[1mPOST /get_thinking_reward HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:55808 - "[1mPOST /get_thinking_reward HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:55834 - "[1mPOST /get_end_of_conversation_reward HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:55820 - "[1mPOST /get_thinking_reward HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:50644 - "[1mPOST /get_end_of_conversation_reward HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:50656 - "[1mPOST /get_end_of_conversation_reward HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:50664 - "[1mPOST /get_end_of_conversation_reward HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:50658 - "[1mPOST /get_length_reward HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:50670 - "[1mPOST /get_length_reward HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:50700 - "[1mPOST /get_length_reward HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:50684 - "[1mPOST /get_length_reward HTTP/1.1[0m" [32m200 OK[0m
