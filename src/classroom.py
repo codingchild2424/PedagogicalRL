@@ -28,6 +28,7 @@ from src.vllm.data_parallel_vllm import ParallelvLLMInference, InferenceTask
 from src.utils.utils import check_equal, extract_answer
 from src.inference_providers.open_router_inference import OpenRouterInference
 from src.inference_providers.gemini_api_inference import GeminiInference
+from src.inference_providers.openai_api_inference import OpenAIInference
 import logging
 
 logger = logging.getLogger(__name__)
@@ -618,6 +619,10 @@ class Classroom:
             self.teacher_model = GeminiInference(
                 self.teacher_model_cfg.model_name_or_path
             )
+        elif self.teacher_model_cfg.use_openai:
+            self.teacher_model = OpenAIInference(
+                self.teacher_model_cfg.model_name_or_path
+            )
         else:
             self.teacher_model = ParallelvLLMInference(
                 model_path=teacher_model_cfg.model_name_or_path,
@@ -647,6 +652,10 @@ class Classroom:
             self.student_model = GeminiInference(
                 self.student_model_cfg.model_name_or_path
             )
+        elif self.student_model_cfg.use_openai:
+            self.student_model = OpenAIInference(
+                self.student_model_cfg.model_name_or_path
+            )
         else:
             self.student_model = ParallelvLLMInference(
                 model_path=student_model_cfg.model_name_or_path,
@@ -673,6 +682,10 @@ class Classroom:
             )
         elif self.judge_model_cfg.use_gemini:
             self.judge_model = GeminiInference(self.judge_model_cfg.model_name_or_path)
+        elif self.judge_model_cfg.use_openai:
+            self.judge_model = OpenAIInference(
+                self.judge_model_cfg.model_name_or_path
+            )
         else:
             self.judge_model = ParallelvLLMInference(
                 model_path=judge_model_cfg.model_name_or_path,

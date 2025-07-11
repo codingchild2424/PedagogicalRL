@@ -1,0 +1,65 @@
+{
+  "os":  "Linux-6.8.0-59-generic-x86_64-with-glibc2.35",
+  "python":  "CPython 3.11.10",
+  "startedAt":  "2025-07-11T12:54:03.368271Z",
+  "args":  [
+    "--config-name",
+    "7b-gpt4.1mini-judge.yaml"
+  ],
+  "program":  "/workspace/PedagogicalRL/train_rl.py",
+  "codePath":  "train_rl.py",
+  "codePathLocal":  "train_rl.py",
+  "git":  {
+    "remote":  "https://github.com/codingchild2424/PedagogicalRL.git",
+    "commit":  "848daf3b4531fa6befb630407eee8a9752d2ed87"
+  },
+  "email":  "codingchild@gmail.com",
+  "root":  "/workspace/PedagogicalRL",
+  "host":  "a3f7923114f0",
+  "executable":  "/usr/bin/python",
+  "cpu_count":  128,
+  "cpu_count_logical":  128,
+  "gpu":  "NVIDIA A100-SXM4-80GB",
+  "gpu_count":  4,
+  "disk":  {
+    "/":  {
+      "total":  "1073741824000",
+      "used":  "53900066816"
+    }
+  },
+  "memory":  {
+    "total":  "2164298661888"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA A100-SXM4-80GB",
+      "memoryTotal":  "85899345920",
+      "cudaCores":  6912,
+      "architecture":  "Ampere",
+      "uuid":  "GPU-e0c46814-7304-5899-88c2-6cb7951f0627"
+    },
+    {
+      "name":  "NVIDIA A100-SXM4-80GB",
+      "memoryTotal":  "85899345920",
+      "cudaCores":  6912,
+      "architecture":  "Ampere",
+      "uuid":  "GPU-bd737219-6413-ca88-89dd-a2201a03a2a1"
+    },
+    {
+      "name":  "NVIDIA A100-SXM4-80GB",
+      "memoryTotal":  "85899345920",
+      "cudaCores":  6912,
+      "architecture":  "Ampere",
+      "uuid":  "GPU-95ad0a39-aaa4-1d4c-cee1-3125125ea5d8"
+    },
+    {
+      "name":  "NVIDIA A100-SXM4-80GB",
+      "memoryTotal":  "85899345920",
+      "cudaCores":  6912,
+      "architecture":  "Ampere",
+      "uuid":  "GPU-4b70e1a1-d8f3-32ea-0166-05de103677af"
+    }
+  ],
+  "cudaVersion":  "12.8",
+  "writerId":  "r57rjl2dngzidpl415jvf6hzko5i2wcj"
+}

@@ -1,0 +1,263 @@
+_wandb:
+    value:
+        cli_version: 0.21.0
+        e:
+            vk7mbx1cvdmwagtgpiboot3b2kyfodc6:
+                args:
+                    - --config-name
+                    - 7b-gpt4.1mini-judge.yaml
+                codePath: train_rl.py
+                codePathLocal: train_rl.py
+                cpu_count: 128
+                cpu_count_logical: 128
+                cudaVersion: "12.8"
+                disk:
+                    /:
+                        total: "1073741824000"
+                        used: "46643257344"
+                email: codingchild@gmail.com
+                executable: /usr/bin/python
+                git:
+                    commit: 848daf3b4531fa6befb630407eee8a9752d2ed87
+                    remote: https://github.com/codingchild2424/PedagogicalRL.git
+                gpu: NVIDIA A100-SXM4-80GB
+                gpu_count: 4
+                gpu_nvidia:
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "85899345920"
+                      name: NVIDIA A100-SXM4-80GB
+                      uuid: GPU-e0c46814-7304-5899-88c2-6cb7951f0627
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "85899345920"
+                      name: NVIDIA A100-SXM4-80GB
+                      uuid: GPU-bd737219-6413-ca88-89dd-a2201a03a2a1
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "85899345920"
+                      name: NVIDIA A100-SXM4-80GB
+                      uuid: GPU-95ad0a39-aaa4-1d4c-cee1-3125125ea5d8
+                    - architecture: Ampere
+                      cudaCores: 6912
+                      memoryTotal: "85899345920"
+                      name: NVIDIA A100-SXM4-80GB
+                      uuid: GPU-4b70e1a1-d8f3-32ea-0166-05de103677af
+                host: a3f7923114f0
+                memory:
+                    total: "2164298661888"
+                os: Linux-6.8.0-59-generic-x86_64-with-glibc2.35
+                program: /workspace/PedagogicalRL/train_rl.py
+                python: CPython 3.11.10
+                root: /workspace/PedagogicalRL
+                startedAt: "2025-07-11T12:20:21.390741Z"
+                writerId: vk7mbx1cvdmwagtgpiboot3b2kyfodc6
+        m: []
+        python_version: 3.11.10
+        t:
+            "1":
+                - 1
+                - 5
+                - 11
+                - 30
+                - 41
+                - 49
+                - 50
+                - 51
+                - 53
+                - 71
+                - 84
+                - 95
+                - 98
+            "2":
+                - 1
+                - 5
+                - 11
+                - 30
+                - 41
+                - 49
+                - 50
+                - 51
+                - 53
+                - 71
+                - 84
+                - 95
+                - 98
+            "3":
+                - 13
+                - 15
+                - 16
+            "4": 3.11.10
+            "5": 0.21.0
+            "6": 4.53.1
+            "12": 0.21.0
+            "13": linux-x86_64
+dataset:
+    value:
+        max_train_examples: -1
+        train_datasets:
+            - name_or_path: rd211/Big-Math-RL-Verified-Filtered
+              ratio: 1
+              split: train
+generation:
+    value:
+        extra_penalty_for_rejected_judges: 1
+        force_thinking: false
+        forced_conversation_type: null
+        ignore_rejected_judge: false
+        initial_attempt_wrapper_prompt_path: prompt_templates/initial_attempt_wrapper_prompt.txt
+        judges_rules_prompts_paths:
+            does_not_leak_answer: prompt_templates/judges/does_not_leak_answer.txt
+            follows_pedagogical_values: prompt_templates/judges/follows_pedagogical_values.txt
+        max_tokens_in_conversation: 8192
+        max_tokens_per_judge_attempt: 2048
+        max_tokens_per_student_attempt: 3900
+        max_tokens_per_turn: 1024
+        max_turns: 15
+        number_judge_attempts: 2
+        number_student_attempts: 8
+        server_port: 8005
+        student_attempt_prompt_path: prompt_templates/student_attempt_prompt.txt
+        student_final_prompt_path: prompt_templates/student_final_prompt.txt
+        student_initial_attempt_prompt_path: prompt_templates/student_initial_attempt_prompt.txt
+        student_names:
+            - Alex
+            - Jamie
+            - Taylor
+            - Jordan
+            - Sam
+            - Casey
+            - Morgan
+            - Riley
+            - null
+        student_personas_prompts_paths:
+            simple_student: prompt_templates/personas/simple_student.txt
+        teacher_prompt_path: prompt_templates/teacher_prompt.txt
+        tokenizer_to_use: Qwen/Qwen2.5-7B-Instruct
+        use_experimental_shared_memory: false
+        use_thinking: false
+huggingface:
+    value:
+        name: <huggingface_name>
+        push_to_hub: false
+judge_model:
+    value:
+        model_name_or_path: gpt-4.1-mini
+        use_gemini: false
+        use_openai: true
+        use_openrouter: false
+        vllm:
+            bits_and_bytes: false
+            enable_sleep_mode: true
+            enforce_eager: false
+            from_0: true
+            gpu_memory_utilization: 0.5
+            load_and_unload: true
+            max_length: 8192
+            max_num_seqs: 256
+            max_number_of_instances: -1
+            number_of_gpus_per_instance: 4
+            temperature: 0.6
+            top_k: 50
+            top_p: 1
+            use_v0: true
+logging:
+    value:
+        run_group: 7b-gpt4.1mini
+        save_dir: checkpoints/7b-gpt4.1mini-judge
+        save_steps: 10
+        wandb: true
+        wandb_entity: null
+        wandb_project: train-rl
+        wandb_run_name: Qwen2.5-7B-Instruct-GPT4.1mini-Judge
+        wandb_tags:
+            - 7b
+            - gpt4.1mini-judge
+reward_model:
+    value:
+        model_name_or_path: Answer
+        vllm:
+            bits_and_bytes: false
+            enable_sleep_mode: true
+            enforce_eager: false
+            from_0: true
+            gpu_memory_utilization: 0.5
+            load_and_unload: true
+            max_length: 8192
+            max_num_seqs: 256
+            max_number_of_instances: -1
+            number_of_gpus_per_instance: 4
+            temperature: 0.9
+            top_k: 50
+            top_p: 1
+            use_v0: true
+seed:
+    value: 42
+skip_first_samples:
+    value: 0
+student_model:
+    value:
+        model_name_or_path: neuralmagic/Meta-Llama-3.1-8B-Instruct-FP8
+        use_gemini: false
+        use_openai: false
+        use_openrouter: false
+        vllm:
+            bits_and_bytes: false
+            enable_sleep_mode: true
+            enforce_eager: false
+            from_0: true
+            gpu_memory_utilization: 0.4
+            load_and_unload: true
+            max_length: 12000
+            max_num_seqs: 512
+            max_number_of_instances: -1
+            number_of_gpus_per_instance: 4
+            temperature: 0.6
+            top_k: 50
+            top_p: 1
+            use_v0: false
+teacher_model:
+    value:
+        lora:
+            alpha: 32
+            bias: none
+            dropout: 0.01
+            enable: false
+            rank: 16
+            target_modules: all-linear
+        model_name_or_path: Qwen/Qwen2.5-7B-Instruct
+        use_gemini: false
+        use_openai: false
+        use_openrouter: false
+        vllm:
+            bits_and_bytes: false
+            enable_sleep_mode: true
+            enforce_eager: true
+            from_0: true
+            gpu_memory_utilization: 0.4
+            load_and_unload: true
+            max_length: 12000
+            max_num_seqs: 512
+            max_number_of_instances: -1
+            number_of_gpus_per_instance: 4
+            temperature: 1
+            top_k: 50
+            top_p: 1
+            use_v0: true
+train:
+    value:
+        batch_size_ref_model: 4
+        beta: 0.001
+        deepspeed_config_path: null
+        epochs: 1
+        epsilon: 0.2
+        gradient_checkpointing: true
+        learning_rate: 5e-07
+        lr_scheduler_type: constant
+        max_steps: -1
+        mu: 2
+        num_samples_per_problem: 8
+        number_of_problems_per_batch: 16
+        optimizer: paged_adamw_8bit
+        per_device_train_batch_size: 2
+        save_policy_to_disk_every_n: 1

@@ -62,7 +62,10 @@ conda activate pedagogy
 # 2) install core dependencies
 pip install -r requirements.txt          # torch, trl, vllm, ...
 
-# 3) add your keys
+# 3) install FlashAttention2 (required for training)
+pip install flash-attn==2.7.4 --no-build-isolation
+
+# 4) add your keys
 nano .env
 ````
 
