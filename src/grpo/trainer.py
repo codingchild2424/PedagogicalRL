@@ -989,14 +989,14 @@ class ClassroomGRPOTrainer(Trainer):
         if rewards_per_func.numel() == 0:
             logger.warning(
                 "No valid rewards found (all conversations likely rejected by judges). "
-                "Using zero rewards for this batch to prevent training crash."
+                "Creating dummy batch with zero advantages to prevent training crash."
             )
-            # Create zero rewards with the correct shape
-            num_completions = len(prompts)
+            # Create minimal dummy batch to keep training loop running
+            dummy_size = len(prompts)
             rewards_per_func = torch.zeros(
-                num_completions, len(self.reward_funcs), device=device, dtype=torch.float32
+                dummy_size, len(self.reward_funcs), device=device, dtype=torch.float32
             )
-            rewards = torch.zeros(num_completions, device=device, dtype=torch.float32)
+            rewards = torch.zeros(dummy_size, device=device, dtype=torch.float32)
         else:
             rewards = (rewards_per_func).sum(dim=1)
 
@@ -1087,6 +1087,7 @@ class ClassroomGRPOTrainer(Trainer):
     ):
         if return_outputs:
             raise ValueError("The GRPOTrainer does not support returning outputs")
+        
         # Compute the per-token log probabilities for the model
         completion_ids, completion_mask = (
             inputs["completion_ids"],
@@ -1165,6 +1166,7 @@ class ClassroomGRPOTrainer(Trainer):
     ):
         if return_outputs:
             raise ValueError("The GRPOTrainer does not support returning outputs")
+        
         torch.cuda.empty_cache()
 
         if self.use_liger_loss:
