@@ -985,7 +985,20 @@ class ClassroomGRPOTrainer(Trainer):
 
         rewards_per_func = rewards_per_func[(rewards_per_func != -199).any(dim=1)]
 
-        rewards = (rewards_per_func).sum(dim=1)
+        # Handle empty tensor case - when all conversations are rejected by judges
+        if rewards_per_func.numel() == 0:
+            logger.warning(
+                "No valid rewards found (all conversations likely rejected by judges). "
+                "Using zero rewards for this batch to prevent training crash."
+            )
+            # Create zero rewards with the correct shape
+            num_completions = len(prompts)
+            rewards_per_func = torch.zeros(
+                num_completions, len(self.reward_funcs), device=device, dtype=torch.float32
+            )
+            rewards = torch.zeros(num_completions, device=device, dtype=torch.float32)
+        else:
+            rewards = (rewards_per_func).sum(dim=1)
 
         # Compute grouped-wise rewards
         mean_grouped_rewards = rewards.view(-1, self.num_generations).mean(dim=1)
@@ -1020,7 +1033,12 @@ class ClassroomGRPOTrainer(Trainer):
         )
         self._metrics[mode]["completion_length"].append(completion_length)
 
-        reward_per_func = rewards_per_func.mean(0)
+        # Handle reward logging safely
+        if rewards_per_func.numel() > 0:
+            reward_per_func = rewards_per_func.mean(0)
+        else:
+            reward_per_func = torch.zeros(len(self.reward_funcs), device=device, dtype=torch.float32)
+        
         for i, reward_func in enumerate(self.reward_funcs):
             if isinstance(
                 reward_func, nn.Module

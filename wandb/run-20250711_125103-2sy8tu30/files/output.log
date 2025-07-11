@@ -1020,3 +1020,7 @@ OpenAI API attempt 1 succeeded
 [32mINFO[0m:     127.0.0.1:50670 - "[1mPOST /get_length_reward HTTP/1.1[0m" [32m200 OK[0m
 [32mINFO[0m:     127.0.0.1:50700 - "[1mPOST /get_length_reward HTTP/1.1[0m" [32m200 OK[0m
 [32mINFO[0m:     127.0.0.1:50684 - "[1mPOST /get_length_reward HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     Shutting down
+[32mINFO[0m:     Waiting for application shutdown.
+[32mINFO[0m:     Application shutdown complete.
+[32mINFO[0m:     Finished server process [[36m26398[0m]
